@@ -1,0 +1,678 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #1a1a2e;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)),
+                url('https://images.unsplash.com/photo-1511193311914-0346f16efe90?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat .number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.stat .label {
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Introduction Section */
+.intro-container {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #4CAF50, #a5d6a7);
+}
+
+.intro-container p {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.intro-container p:first-of-type::first-letter {
+    font-size: 3.5rem;
+    font-weight: 600;
+    float: left;
+    padding-right: 8px;
+    line-height: 1;
+    color: #4CAF50;
+}
+
+.intro-container p:last-child {
+    margin-bottom: 0;
+}
+
+/* Legends Section */
+.legends-section {
+    background: #fff;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.legends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.legend-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.legend-card:hover {
+    transform: translateY(-5px);
+}
+
+.legend-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.legend-info {
+    padding: 1.5rem;
+}
+
+.legend-name {
+    font-size: 1.8rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.legend-nickname {
+    font-size: 1.2rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.legend-description {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.legend-achievements {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Rules Container */
+.rules-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rules-container h3 {
+    color: #1a1a2e;
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.rules-container h3:first-child {
+    margin-top: 0;
+}
+
+.rules-container ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.rules-container ul ul {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rules-container li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Table Talk Grid */
+.table-talk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.table-talk-grid .hand-card {
+    height: auto;
+    min-height: 120px;
+    padding: 1.5rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.table-talk-grid .hand-card h3 {
+    font-size: 1.3rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.table-talk-grid .hand-card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a1a2e;
+    font-size: 2.5rem;
+}
+
+/* Hand Rankings Grid */
+.hand-rankings-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    perspective: 1000px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hand-rankings-grid::before {
+    content: '* Hands ordered from lowest to highest ranking';
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.hand-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hand strength background colors */
+.hand-card[data-strength="1"] { background-color: #a5d6a7; }
+.hand-card[data-strength="2"] { background-color: #a5d6a7; }
+.hand-card[data-strength="3"] { background-color: #a5d6a7; }
+.hand-card[data-strength="4"] { background-color: #a5d6a7; }
+.hand-card[data-strength="5"] { background-color: #a5d6a7; }
+.hand-card[data-strength="6"] { background-color: #a5d6a7; }
+.hand-card[data-strength="7"] { background-color: #a5d6a7; }
+.hand-card[data-strength="8"] { background-color: #a5d6a7; }
+.hand-card[data-strength="9"] { background-color: #a5d6a7; }
+.hand-card[data-strength="10"] { background-color: #a5d6a7; }
+
+.hand-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.hand-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.hand-card-front,
+.hand-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    backface-visibility: hidden;
+    background: inherit;
+}
+
+.hand-card-front {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hand-card-front h3 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hand-card-front .hand-description {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.hand-card-front .hand-probability {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.hand-card[data-strength="9"] .hand-card-front h3,
+.hand-card[data-strength="10"] .hand-card-front h3 {
+    color: #1a1a2e;
+}
+
+.hand-card[data-strength="9"] .hand-card-front .hand-description,
+.hand-card[data-strength="10"] .hand-card-front .hand-description {
+    color: #444;
+}
+
+.hand-card[data-strength="9"] .hand-card-front .hand-probability,
+.hand-card[data-strength="10"] .hand-card-front .hand-probability {
+    color: #666;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hand-card-back {
+    background: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hand-card-back h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #1a1a2e;
+    width: 100%;
+}
+
+.hand-probability {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+
+.hand-description {
+    font-size: 1rem;
+    color: #444;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+/* Card display */
+.card-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    transform: scale(0.9);
+}
+
+.players-section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.boards-section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+.player-side, .opponent-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 0 1 auto;
+}
+
+.hole-cards, .opponent-cards {
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+    justify-content: center;
+}
+
+.hole-cards::after {
+    content: 'Your Cards';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+.opponent-cards::after {
+    content: 'Opponent Cards';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+.community-cards {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.community-cards::after {
+    content: 'Board';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.playing-card {
+    width: 45px;
+    height: 63px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.playing-card.winning-card {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    border: 2px solid #4CAF50;
+    opacity: 1;
+}
+
+.playing-card.winning-card.opponent-winning,
+.opponent-cards .playing-card.winning-card,
+.opponent-side .playing-card.winning-card {
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+    border: 2px solid #e74c3c;
+}
+
+.playing-card.unused-card {
+    opacity: 0.4;
+}
+
+.card-value {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.card-suit {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.playing-card.hearts .card-suit,
+.playing-card.diamonds .card-suit {
+    color: #e74c3c;
+}
+
+.playing-card.clubs .card-suit,
+.playing-card.spades .card-suit {
+    color: #2c3e50;
+}
+
+/* Footer */
+footer {
+    background: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 3rem 1rem;
+    }
+    
+    .hand-card {
+        height: 320px;
+    }
+    
+    .playing-card {
+        width: 45px;
+        height: 63px;
+    }
+    
+    .card-value {
+        font-size: 1rem;
+    }
+    
+    .card-suit {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats {
+        gap: 2rem;
+    }
+    
+    .stat .number {
+        font-size: 2.5rem;
+    }
+    
+    .stat .label {
+        font-size: 1rem;
+    }
+    
+    .intro-container {
+        padding: 2rem;
+    }
+    
+    .intro-container p {
+        font-size: 1.2rem;
+    }
+    
+    .intro-container p:first-of-type::first-letter {
+        font-size: 2.8rem;
+    }
+    
+    .table-talk-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .legends-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 1s ease-out;
+}
+
+.flip-instruction {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+    font-style: italic;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+} 
